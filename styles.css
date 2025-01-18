@@ -1,0 +1,205 @@
+body {
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.main-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
+    text-align: center;
+    margin: 25px 0px;
+    
+}
+
+.app-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.unit-toggle {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.unit-label {
+    font-size: 1rem;
+    margin-right: 10px;
+    color: #fff;
+}
+
+.form-select {
+    display: inline-block;
+    width: auto;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.form-select:focus {
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+.input {
+    margin-bottom: 20px;
+}
+
+.input input {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input input:focus {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+#userinput {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+#userinput:focus {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+#getDetailsButton {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#getDetailsButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#getDetailsButton:focus {
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+#content {
+    margin-top: 20px;
+}
+
+#result1,
+#result2 {
+    margin: 10px 0;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25); 
+    animation: slideIn 0.8s ease-out;
+}
+
+#result1 {
+    font-weight: bold;
+    color: #000;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+#result2 {
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .main-container {
+        padding: 25px;
+        margin-top: 30px;
+    }
+
+    .app-heading {
+        font-size: 2rem;
+    }
+
+    .unit-toggle,
+    .button-container {
+        margin-bottom: 20px;
+    }
+
+    #userinput {
+        font-size: 0.95rem;
+    }
+
+    #result1,
+    #result2 {
+        font-size: 1rem;
+    }
+
+    #getDetailsButton {
+        font-size: 1rem;
+    }
+}
